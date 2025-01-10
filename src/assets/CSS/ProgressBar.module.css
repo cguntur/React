@@ -1,0 +1,49 @@
+.countDown{
+    text-align: center;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: #91f2cf;
+}
+
+.label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fontWeight: bold;
+}
+
+input{
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+
+container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.progressBarContainer{
+    width: 50%;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.progressBar{
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.1s linear;
+}

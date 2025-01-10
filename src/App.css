@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 250px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  border-bottom: 1px solid black;
+  overflow: hidden;
+  max-width:300px;
+  margin: 0 auto;
+}
+
+const styles = {
+  button: {
+    padding: '10px 20px',
+    fontSize: '16px',
+    cursor: 'pointer',
+    marginBottom: '20px',
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '15px',
+  },
+  progressBarContainer: {
+    width: '50%',
+    height: '30px',
+    backgroundColor: '#e0e0e0',
+    borderRadius: '15px',
+    position: 'relative',
+    overflow: 'hidden',
+    marginBottom: '20px',
+    margin: '0, auto',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#4caf50',
+    transition: 'width 0.1s linear',
+  },
+  label: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+};
