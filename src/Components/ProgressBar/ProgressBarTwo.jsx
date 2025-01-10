@@ -67,7 +67,7 @@ const ProgressBarTwo = () => {
 
     return(
         <>
-            <div className="countDown" style={{ textAlign: "center", marginTop: "20px" }}>
+            <div style={{ ...styles.countDown, marginTop: "20px" }}>
                 <input type="number" ref={inputRef} onChange={handleInputChange} value={customTime} placeholder="Enter a time in minutes" />
                 <button onClick={handleButtonClick}>
                 {isActive ? "Counting Down..." : "Start Timer"}
@@ -138,7 +138,7 @@ const AddProgressBar = ({duration, remainingTime, minutes, seconds}) =>{
         <>
             <div style={styles.progressBarContainer}>
                 <div style={{ ...styles.progressBar, width: `${progress}%` }}></div>
-                <span style={{...styles.label, color: `${getColor(progress)}`}}>{`${minutes}:${seconds}`}</span>
+                <span style={{...styles.label, color: `${getColor(progress)}`}}>{`${Math.round(progress)}%`}</span>
             </div>
         </>
         
@@ -146,6 +146,9 @@ const AddProgressBar = ({duration, remainingTime, minutes, seconds}) =>{
 }
 
 const styles = {
+    countDown: {
+      textAlign: 'center',  
+    },
     button: {
       padding: '10px 20px',
       fontSize: '16px',
@@ -163,6 +166,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         gap: '15px',
+        textAlign: 'center',
       },
       progressBarContainer: {
         width: '50%',
@@ -186,9 +190,6 @@ const styles = {
         transform: 'translate(-50%, -50%)',
         fontWeight: 'bold',
       },
-      labelBack: {
-
-      }
 }
 
 export default ProgressBarTwo;

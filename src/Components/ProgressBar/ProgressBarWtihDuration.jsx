@@ -54,15 +54,6 @@ const ProgressBarWithDuration = () => {
         setProgressDone(false);
     }
 
-    // Generate the text color based on progress
-    const getColor = (value) => {
-        var color = "255";
-        if(value < 50){
-            color = "0";
-        }
-        return `rgb(${color}, ${color}, ${color})`;
-    };
-
     return(
         <>
             <div className={`${styles.countDown}`} style={{ textAlign: "center", marginTop: "20px" }}>
@@ -87,7 +78,7 @@ const ProgressBarWithDuration = () => {
                     
                 </div>
                 {isActive ? 
-                    <AddProgressBar duration={customTimeInMilliSeconds} remainingTime={timeLeft} minutes={minutes} seconds={seconds} /> : 
+                    <AddProgressBar duration={customTimeInMilliSeconds} /> : 
                     ""
                 }
                 
@@ -96,7 +87,7 @@ const ProgressBarWithDuration = () => {
     )
 }
 
-const AddProgressBar = ({duration, remainingTime, minutes, seconds}) =>{
+const AddProgressBar = ({duration}) =>{
         const [progress, setProgress] = useState(100);
       
     // Gradually fill the progress bar
